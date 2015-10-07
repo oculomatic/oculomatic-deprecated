@@ -849,7 +849,10 @@ int main(){
 		if (video_display==1 or save_csv==1){
 			if (video_display==1){
 				imshow("window",image);
-				//imshow("filtered", out.mPupilEdges);
+				
+				if (!out.mPupilEdges.empty()) {
+    					imshow("filtered", out.mPupilEdges);;
+				}
 			sw.Stop();
 	                delay = sw.GetDuration()*1000;
 
