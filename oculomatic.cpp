@@ -825,7 +825,7 @@ int main(){
 			dataxl[0] = buffer_x[2];
 			datayl[0] = buffer_y[2];
                 }
-		//std::cout << "\r" << dataxl[0] << "," << datayl[0] << std::flush;
+		  std::cout << "\r" << dataxl[0] << "," << datayl[0] << std::flush;
 
 
 		ret = comedi_internal_trigger_cust(devx,subdevicex,channelx, channely,dataxl,datayl,range,aref);
@@ -849,14 +849,14 @@ int main(){
 		if (video_display==1 or save_csv==1){
 			if (video_display==1){
 				imshow("window",image);
-				
+
 				if (!out.mPupilEdges.empty()) {
-    					imshow("filtered", out.mPupilEdges);;
+    				imshow("filtered", out.mPupilEdges);;
 				}
 			sw.Stop();
 	                delay = sw.GetDuration()*1000;
 
-			std::cout << delay << std::endl;
+			//std::cout << delay << std::endl;
 			}
 		}
 

@@ -31,7 +31,7 @@ public:
         ss.setf(std::ios::fixed);
         ss << (val.elapsed()*1000.0) << "ms";
 	//std::cout.precision(17);
-	std::cout << key << "," << (val.elapsed()*1000.0) << std::endl;
+	//std::cout << key << "," << (val.elapsed()*1000.0) << std::endl;
         m_log.push_back(std::make_pair(key, ss.str()));
     }
 
