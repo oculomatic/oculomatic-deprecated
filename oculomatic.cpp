@@ -744,8 +744,8 @@ int main(){
 		//scaling to output
 		//we also assume that the pupil cant be at the VERY edge of the FOV
 
-		xpos = ((out.pPupil.x - 100) / (xmax-200))*(float)max_rngx;
-		ypos = ((out.pPupil.y - 100) / (ymax-200))*(float)max_rngy;
+		xpos = ((out.pPupil.x - 120) / (xmax-240))*(float)max_rngx;
+		ypos = ((out.pPupil.y - 120) / (ymax-240))*(float)max_rngy;
 
 		if(buffer_x.size() < 3){
       buffer_x.push_front(xpos);
