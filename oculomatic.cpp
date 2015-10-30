@@ -569,6 +569,7 @@ int main(){
   //  Wait for 'c' to be pushed to move on
   cout << "Position eye inside field of view\n";
   cout << "ROI selection is now done automagically\n";
+  cout << "press 1 or 2 to mirror image\n";
   cout << "press c to continue\n";
   char kb = 0;
   namedWindow("set",WINDOW_NORMAL);
@@ -583,6 +584,12 @@ int main(){
     if (error != PGRERROR_OK){
       std::cout<< "capture error" << std::endl;
       return false;
+    }
+    if(kb == '1'){
+    camera.WriteRegister( 0x1054, 0x1 );
+    }
+    if(kb == '2'){
+    camera.WriteRegister( 0x1054, 0 );
     }
 
     // Convert image to OpenCV color scheme
