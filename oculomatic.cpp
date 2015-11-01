@@ -754,6 +754,9 @@ int main(){
     xpos = ((out.pPupil.x - 120) / (xmax-240))*(float)max_rngx;
     ypos = ((out.pPupil.y - 120) / (ymax-240))*(float)max_rngy;
 
+    xpos = xpos - center_offset_x;
+    ypos = xpos - center_offset_y;
+
     if(buffer_x.size() < 3){
       buffer_x.push_front(xpos);
       buffer_y.push_front(ypos);
