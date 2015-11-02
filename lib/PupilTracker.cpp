@@ -229,7 +229,7 @@ bool pupiltracker::findPupilEllipse(
   // Get histogram of pupil region, segment with KMeans
   // --------------------------------------------------
 
-  const int bins = 64;
+  const int bins = 256;
 
   cv::Mat_<float> hist;
   SECTION("Histogram", log)
