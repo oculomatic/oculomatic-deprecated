@@ -755,7 +755,7 @@ int main(){
     ypos = ((out.pPupil.y - 120) / (ymax-240))*(float)max_rngy;
 
     xpos = xpos - center_offset_x;
-    ypos = xpos - center_offset_y;
+    ypos = ypos - center_offset_y;
 
     if(buffer_x.size() < 3){
       buffer_x.push_front(xpos);
@@ -832,8 +832,8 @@ int main(){
 
       n = SAMPLE_CT * sizeof(sampl_t);
       for (i=0; i<SAMPLE_CT; i++){
-        dataxl[0] = buffer_x[2];
-        datayl[0] = buffer_y[2];
+        dataxl[i] = buffer_x[2];
+        datayl[i] = buffer_y[2];
       }
       std::cout << "\r" << dataxl[0] << "," << datayl[0] << std::flush;
 
